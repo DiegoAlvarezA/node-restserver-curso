@@ -124,7 +124,7 @@ app.delete('/usuario/:id', [verificaToken, verificaAdmin_Role], (req, res) => {
 
 
 
-    Usuario.findByIdAndUpdate(id, body, { new: true, runValidators: true }, (err, usuarioDB) => {
+    Usuario.findByIdAndUpdate(id, body, { new: true }, (err, usuarioDB) => {
 
         if (err) {
             return res.status(400).json({

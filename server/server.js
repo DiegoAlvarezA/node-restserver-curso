@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //Habilitar la carpeta public
 app.use(express.static(path.resolve(__dirname, '../public')));
-console.log(path.resolve(__dirname, '../public'));
 
 // parse application/json
 app.use(bodyParser.json())
